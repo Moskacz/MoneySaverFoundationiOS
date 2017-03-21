@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct Transaction {
+public struct Transaction {
     let title: String
     let value: NSDecimalNumber
     let category: String
