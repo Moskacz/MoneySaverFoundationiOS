@@ -349,7 +349,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 4.0;
 			};
 			name = Debug;
 		};
@@ -369,7 +369,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.michal.moskala.MoneySaverFoundationiOS;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 4.0;
 			};
 			name = Release;
 		};
@@ -418,6 +418,7 @@
 				35C2342D1E81AC200095AFFE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		35C2342E1E81AC200095AFFE /* Build configuration list for PBXNativeTarget "MoneySaverFoundationiOSTests" */ = {
 			isa = XCConfigurationList;
@@ -426,6 +427,7 @@
 				35C234301E81AC200095AFFE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
