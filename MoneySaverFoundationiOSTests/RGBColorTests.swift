@@ -29,4 +29,29 @@ class RGBColorTests: XCTestCase {
         XCTAssertEqual(val, 0.3)
     }
     
+    func test_whenInitializingRGBAColorFromColor_thenComponentsShouldBeComputed() {
+        let color = RGBAColor(color: #colorLiteral(red: 0.9529411793, green: 0.6862745285, blue: 0.1333333403, alpha: 1))
+        XCTAssertNotEqual(color.red, 0.0)
+        XCTAssertNotEqual(color.green, 0.0)
+        XCTAssertNotEqual(color.blue, 0.0)
+        XCTAssertNotEqual(color.alpha, 0.0)
+    }
+    
+    func test_whenInitializingRGBAColorFromColor_thenComponentsShouldBeIn0to1Range() {
+        let color = RGBAColor(color: #colorLiteral(red: 0.9529411793, green: 0.6862745285, blue: 0.1333333403, alpha: 1))
+        let expectedRange: ClosedRange<CGFloat> = 0.0...1.0
+        XCTAssertTrue(expectedRange.contains(color.red))
+        XCTAssertTrue(expectedRange.contains(color.green))
+        XCTAssertTrue(expectedRange.contains(color.blue))
+        XCTAssertTrue(expectedRange.contains(color.alpha))
+    }
+    
+    func test_whenInitializingRGBAColorFromValue_thenComponentsShouldBeIn0to1Range() {
+        let color = RGBAColor(red: -1, green: 1, blue: 1.2, alpha: 0.5)
+        XCTAssertEqual(color.red, 0.0)
+        XCTAssertEqual(color.green, 1.0)
+        XCTAssertEqual(color.blue, 1.0)
+        XCTAssertEqual(color.alpha, 0.5)
+    }
+    
 }
