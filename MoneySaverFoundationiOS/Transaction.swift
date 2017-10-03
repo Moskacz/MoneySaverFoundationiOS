@@ -9,13 +9,13 @@
 import Foundation
 
 public struct Transaction {
-    public let identifier: String
+    public let identifier: UUID
     public let title: String
     public let value: NSDecimalNumber
     public let creationTimeInterval: TimeInterval
     public let category: TransactionCategory
     
-    public init(identifier: String,
+    public init(identifier: UUID,
                 title: String,
                 value: NSDecimalNumber,
                 creationTimeInterval: TimeInterval,
